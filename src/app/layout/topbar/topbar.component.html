@@ -1,17 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="assets/logo.png" alt="Happy Motel Logo" width="30" height="24">
-    </a>
-    <button class="btn btn-outline-secondary" (click)="toggleSidebar()">
-      <i class="pi pi-bars"></i>
-    </button>
-    <div class="ml-auto">
-      <img src="assets/avatar.png" alt="User Avatar" width="30" height="30" class="rounded-circle" (click)="toggleUserMenu()">
-      <div *ngIf="userMenuVisible" class="dropdown-menu dropdown-menu-right show">
-        <a class="dropdown-item" href="#">Profile</a>
-        <a class="dropdown-item" (click)="logout()">Logout</a>
+<div class="card">
+  <p-toolbar
+    styleClass="bg-gray-900 shadow-2"
+    [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' ,'background' :'#99bccd'}">
+    <ng-template pTemplate="start">
+      <img style="width : 60px" src="assets/images/home-1.svg" />
+    </ng-template>
+    <ng-template pTemplate="center">
+      <div class="flex flex-wrap align-items-center gap-3">
+        <button style="margin : 10px 10px">
+          <i style="width: 25px;height: 25px" class="pi pi-home"></i>
+        </button>
+        <button style="margin : 20px 20px">
+          <i class="pi pi-user"></i>
+        </button>
+        <button style="margin : 20px 20px">
+          <i class="pi pi-search"></i>
+        </button>
       </div>
-    </div>
-  </div>
-</nav>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div class="flex align-items-center gap-2">
+        <p-avatar
+          image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+          shape="circle" />
+        <span class="font-bold text-bluegray-50">
+                Amy Elsner
+            </span>
+      </div>
+    </ng-template>
+  </p-toolbar>
+</div>

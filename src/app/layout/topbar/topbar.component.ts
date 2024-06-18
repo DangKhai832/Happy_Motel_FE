@@ -19,7 +19,7 @@ export class TopbarComponent {
     this.userMenuVisible = !this.userMenuVisible;
   }
 
-  logout() {
-    this.authService.logout();
-  }
+  // logout() {
+  //   this.authService.logout();
+  // }
 }

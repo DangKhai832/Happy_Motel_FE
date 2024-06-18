@@ -10,6 +10,8 @@ import { TopbarComponent } from './layout/topbar/topbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {ButtonModule} from "primeng/button";
+import {ToolbarModule} from "primeng/toolbar";
+import {AvatarModule} from "primeng/avatar";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {ButtonModule} from "primeng/button";
     ButtonModule,
     AuthModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToolbarModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

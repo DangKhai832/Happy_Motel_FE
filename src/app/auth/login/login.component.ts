@@ -27,9 +27,15 @@ export class LoginComponent {
     });
   }
   login() {
-    // Implement actual login logic here, this is just a placeholder
-    const fakeToken = 'fake-jwt-token';
-    this.authService.login(fakeToken);
-    this.router.navigate(['/home']);
+    this.authService.login(this.username, this.password)
+      .subscribe(
+        (response: any) => {
+          localStorage.setItem('token', response.result.token);
+          this.router.navigate(['/home']);
+        },
+        (error: any) => {
+          console.error('Login error:', error);
+        }
+      );
   }
 }
