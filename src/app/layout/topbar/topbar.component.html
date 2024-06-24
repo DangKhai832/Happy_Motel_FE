@@ -1,31 +1,31 @@
 <div class="card">
   <p-toolbar
     styleClass="bg-gray-900 shadow-2"
-    [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' ,'background' :'#99bccd'}">
+    [style]="{ 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' ,'background' :'#99bccd'}">
     <ng-template pTemplate="start">
       <img style="width : 60px" src="assets/images/home-1.svg" />
     </ng-template>
-    <ng-template pTemplate="center">
-      <div class="flex flex-wrap align-items-center gap-3">
-        <button style="margin : 10px 10px">
-          <i style="width: 25px;height: 25px" class="pi pi-home"></i>
-        </button>
-        <button style="margin : 20px 20px">
-          <i class="pi pi-user"></i>
-        </button>
-        <button style="margin : 20px 20px">
-          <i class="pi pi-search"></i>
-        </button>
-      </div>
-    </ng-template>
+<!--    <ng-template pTemplate="center">-->
+<!--      <div class="flex flex-wrap align-items-center gap-3">-->
+<!--        <button style="margin : 20px 20px">-->
+<!--          <i class="pi pi-home"></i>-->
+<!--        </button>-->
+<!--        <button style="margin : 20px 20px">-->
+<!--          <i class="pi pi-user"></i>-->
+<!--        </button>-->
+<!--        <button style="margin : 20px 20px">-->
+<!--          <i class="pi pi-search"></i>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </ng-template>-->
     <ng-template pTemplate="end">
-      <div class="flex align-items-center gap-2">
+      <div class="flex align-items-center gap-2" style="display: flex; align-items: center;padding-right : 30px">
         <p-avatar
           image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
           shape="circle" />
-        <span class="font-bold text-bluegray-50">
-                Amy Elsner
-            </span>
+        <span class="font-bold text-bluegray-50" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">
+      Amy Elsner
+    </span>
       </div>
     </ng-template>
   </p-toolbar>

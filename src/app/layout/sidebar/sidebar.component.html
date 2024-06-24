@@ -1,16 +1,28 @@
-<div class="sidebar" [ngClass]="{'sidebar-collapsed': !sidebarVisible}">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="pi pi-home"></i> <span *ngIf="sidebarVisible">Home</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="pi pi-info-circle"></i> <span *ngIf="sidebarVisible">Room Info</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="pi pi-calendar"></i> <span *ngIf="sidebarVisible">Rental Time</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="pi pi-dollar"></i> <span *ngIf="sidebarVisible">Finances</span></a>
-    </li>
-  </ul>
+<div class="sidebar" [ngClass]="{'sidebar-expanded': isHovered}" (mouseenter)="toggleHover(true)" (mouseleave)="toggleHover(false)">
+  <div class="nav">
+    <div class="nav-item">
+      <a class="nav-link" href="#">
+        <img src="assets/images/icon%20home.svg" alt="Home" class="icon">
+        <span>Home</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#">
+        <img src="assets/images/detail.svg" alt="Room Info" class="icon">
+        <span>Room Info</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#">
+        <img src="assets/images/calendar.svg" alt="Rental Time" class="icon">
+        <span>Rental Time</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#">
+        <img src="assets/images/money.svg" alt="Finances" class="icon">
+        <span>Finances</span>
+      </a>
+    </div>
+  </div>
 </div>

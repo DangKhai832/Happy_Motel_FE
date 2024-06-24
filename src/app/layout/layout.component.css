@@ -3,4 +3,18 @@
 }
 .content {
   flex: 1;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+app-sidebar {
+  padding-top:60px;
+}
+app-topbar {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #f0f0f0;
 }

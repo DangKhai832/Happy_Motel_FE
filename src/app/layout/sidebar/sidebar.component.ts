@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  sidebarVisible = true;
+  isHovered = false;
 
-  toggleSidebar() {
-    this.sidebarVisible = !this.sidebarVisible;
+  constructor() {}
+
+  toggleHover(hovered: boolean) {
+    this.isHovered = hovered;
   }
 }
