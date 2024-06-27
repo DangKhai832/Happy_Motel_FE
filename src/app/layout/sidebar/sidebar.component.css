@@ -1,19 +1,19 @@
 .sidebar {
   margin-top: 60px;
-  width: 50px; /* Chiều rộng mặc định khi sidebar thu gọn */
+  width: 50px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgb(188 190 202);
-  z-index: 100; /* Đảm bảo sidebar luôn hiển thị trước app-router */
+  z-index: 100;
   transition: width 0.3s ease, z-index 0s ease 0.3s;
   overflow: hidden;
 }
 
 .sidebar-expanded {
-  width: 200px; /* Chiều rộng khi sidebar được mở rộng */
-  z-index: 1001; /* Đảm bảo sidebar luôn hiển thị trước app-router khi mở rộng */
+  width: 200px;
+  z-index: 1001;
   transition: width 0.3s ease, z-index 0s ease 0s;
 }
 
@@ -26,13 +26,13 @@
 }
 
 .sidebar .nav-link .icon {
-  width: 30px; /* Đặt kích thước cho icon SVG */
+  width: 30px;
   height: 30px;
-  margin-right: 10px; /* Khoảng cách giữa icon và văn bản */
+  margin-right: 10px;
 }
 
 .sidebar .nav-link span {
-  display: none; /* Mặc định ẩn đi */
+  display: none;
   padding-left: 10px;
   white-space: nowrap;
 }
@@ -42,10 +42,10 @@
 }
 
 .app-content {
-  margin-left: 50px; /* Để nội dung không bị che phủ bởi sidebar khi thu gọn */
+  margin-left: 50px;
   transition: margin-left 0.3s ease;
 }
 
 .sidebar-expanded + .app-content {
-  margin-left: 200px; /* Điều chỉnh margin khi sidebar được mở rộng */
+  margin-left: 200px;
 }
