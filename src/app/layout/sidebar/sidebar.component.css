@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(88 97 147);
+  background-color: rgb(188 190 202);
   z-index: 100; /* Đảm bảo sidebar luôn hiển thị trước app-router */
   transition: width 0.3s ease, z-index 0s ease 0.3s;
   overflow: hidden;
