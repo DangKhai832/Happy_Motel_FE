@@ -9,9 +9,10 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { TopbarComponent } from './layout/topbar/topbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import {ButtonModule} from "primeng/button";
-import {ToolbarModule} from "primeng/toolbar";
-import {AvatarModule} from "primeng/avatar";
+import { ButtonModule } from 'primeng/button';
+import { ToolbarModule } from 'primeng/toolbar';
+import { AvatarModule } from 'primeng/avatar';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,13 @@ import {AvatarModule} from "primeng/avatar";
     AppRoutingModule,
     ButtonModule,
     AuthModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, // required for animations
     HttpClientModule,
     ToolbarModule,
-    AvatarModule
+    AvatarModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

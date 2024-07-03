@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { ToastrService, ToastNoAnimation } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router
+  ,private toastr: ToastrService) {}
 
   ngOnInit(): void {
     const registerButton = document.getElementById('register');
@@ -34,7 +36,7 @@ export class LoginComponent {
           this.router.navigate(['/home']);
         },
         (error: any) => {
-          console.error('Login error:', error);
+          this.toastr.error("lỗi tùm lum ")
         }
       );
   }
